@@ -59,7 +59,7 @@ public:
         Automaton newAutomaton;
         newAutomaton.addToBeginNode(EPSILON, begin);
         end->go[EPSILON].push_back(begin);
-        end->go[EPSILON].push_back(newAutomaton.end);
+        begin->go[EPSILON].push_back(newAutomaton.end);
         return newAutomaton;
     }
 
